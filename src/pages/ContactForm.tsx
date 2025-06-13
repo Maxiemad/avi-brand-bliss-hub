@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
@@ -183,15 +182,18 @@ const ContactForm = () => {
               </motion.div>
 
               <motion.div variants={itemVariants}>
-                <Button
-                  type="submit"
-                  disabled={!isValid}
-                  className="w-full h-14 bg-[#e4ded7] text-[#0e1016] hover:bg-[#e4ded7]/90 disabled:bg-[#e4ded7]/20 disabled:text-[#e4ded7]/40 font-semibold text-lg rounded-xl transition-all duration-300"
+                <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Submit Details
-                </Button>
+                  <Button
+                    type="submit"
+                    disabled={!isValid}
+                    className="w-full h-14 bg-[#e4ded7] text-[#0e1016] hover:bg-[#e4ded7]/90 disabled:bg-[#e4ded7]/20 disabled:text-[#e4ded7]/40 font-semibold text-lg rounded-xl transition-all duration-300"
+                  >
+                    Submit Details
+                  </Button>
+                </motion.div>
               </motion.div>
             </form>
           </motion.div>
