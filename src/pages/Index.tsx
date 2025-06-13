@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 import Preloader from '../components/Preloader';
 import Hero from '../components/Hero';
 import CardCarousel from '../components/CardCarousel';
@@ -37,6 +38,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#0e1016] text-[#e4ded7] overflow-x-hidden relative">
+      {/* Fixed Navigation - Contact Form Link */}
+      <div className="fixed top-4 right-4 z-50">
+        <Link 
+          to="/contact"
+          className="bg-[#e4ded7]/10 backdrop-blur-sm border border-[#e4ded7]/20 text-[#e4ded7] px-6 py-3 rounded-full hover:bg-[#e4ded7]/20 transition-all duration-300 font-medium"
+          data-cursor
+        >
+          Get In Touch
+        </Link>
+      </div>
+
       {/* Simplified Background Texture */}
       <div 
         className="fixed inset-0 pointer-events-none z-0 opacity-20"
